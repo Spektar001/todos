@@ -98,6 +98,7 @@
 
 .todo__text {
   flex-grow: 1;
+  padding-top: 5px;
 }
 
 .todo__text.completed {
