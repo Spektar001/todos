@@ -1,0 +1,139 @@
+.todo__form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.form__input {
+  width: 100%;
+  min-height: 35px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #bebebe;
+}
+.form__input:focus {
+  border: 1px solid #ecbcbc;
+  transition: all 0.3s ease;
+}
+.form__input:hover {
+  border: 1px solid #ecbcbc;
+}
+
+.form__input.alert {
+  border: 2px solid red;
+}
+
+.form__btn {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #e0827a;
+  text-transform: uppercase;
+  border: 1px solid #bebebe;
+  width: 21%;
+  min-height: 35px;
+  padding: 10px;
+}
+.form__btn:hover {
+  border: 1px solid #ecbcbc;
+}
+
+.btn {
+  background-color: #ffffff;
+  font-size: 1rem;
+}
+
+.todo__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.todo__item {
+  width: 100%;
+  min-height: 35px;
+  border: 1px solid #cfcfcf;
+  font-size: 16px;
+  text-align: left;
+  padding: 10px;
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  overflow-wrap: break-word;
+}
+
+.custom-checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  display: block;
+  width: 0;
+  height: 0;
+}
+
+.custom-checkbox {
+  display: none;
+}
+
+.checkbox-label {
+  display: inline-block;
+  min-width: 25px;
+  min-height: 25px;
+  border: 1px solid gray;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+
+.checkbox-label::before {
+  content: "\2713";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1rem;
+  color: green;
+  visibility: hidden;
+}
+
+.custom-checkbox:checked + .checkbox-label::before {
+  visibility: visible;
+}
+
+.todo__text {
+  flex-grow: 1;
+  padding-top: 5px;
+}
+
+.todo__text.completed {
+  text-decoration: line-through;
+  color: #808080;
+  padding-left: 5px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.count {
+  font-size: 1.2rem;
+}
+.filter__bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn.active {
+  border: 1px solid #e7c9c6;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.clear__btn:hover {
+  color: #e7c9c6;
+  transition: all 0.3s ease;
+}
