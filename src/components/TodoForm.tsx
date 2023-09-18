@@ -16,6 +16,7 @@ export const TodoForm = ({
   return (
     <form className="todo__form" onSubmit={handleFormSubmit}>
       <input
+        data-testid="input"
         className={empty ? "form__input alert" : "form__input"}
         placeholder={
           empty ? "Please write your task..." : "What needs to be done?"

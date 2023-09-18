@@ -133,6 +133,11 @@
   border-radius: 3px;
 }
 
+.btn.no-active:hover {
+  color: #e7c9c6;
+  transition: all 0.3s ease;
+}
+
 .clear__btn:hover {
   color: #e7c9c6;
   transition: all 0.3s ease;

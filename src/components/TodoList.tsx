@@ -7,7 +7,7 @@ export const TodoList = ({ toggleTodo, filteredTodos }: TodosProps) => {
   return (
     <ul className="todo__list">
       {filteredTodos.map((todo) => (
-        <li className="todo__item" key={todo.id}>
+        <li data-testid={todo.id} className="todo__item" key={todo.id}>
           <input
             id={todo.id}
             className="custom-checkbox"
@@ -15,7 +15,7 @@ export const TodoList = ({ toggleTodo, filteredTodos }: TodosProps) => {
             checked={todo.completed}
             onChange={() => toggleTodo(todo.id)}
           />
-          <label htmlFor={todo.id} className="checkbox-label"></label>
+          <label data-testid="checkbox" htmlFor={todo.id} className="checkbox-label"></label>
           <span
             className={todo.completed ? "todo__text completed" : "todo__text"}
           >

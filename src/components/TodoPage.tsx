@@ -77,19 +77,19 @@ export const TodoPage = () => {
         <div className="filter__bar">
           <Button
             onClick={() => setFilter("all")}
-            className={filter === "all" ? "btn active" : "btn"}
+            className={filter === "all" ? "btn active" : "btn no-active"}
           >
             All
           </Button>
           <Button
             onClick={() => setFilter("active")}
-            className={filter === "active" ? "btn active" : "btn"}
+            className={filter === "active" ? "btn active" : "btn no-active"}
           >
             Active
           </Button>
           <Button
             onClick={() => setFilter("completed")}
-            className={filter === "completed" ? "btn active" : "btn"}
+            className={filter === "completed" ? "btn active" : "btn no-active"}
           >
             Completed
           </Button>

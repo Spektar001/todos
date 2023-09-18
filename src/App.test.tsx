@@ -1,9 +1,23 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen } from "@testing-library/react";
+import App from "./App";
+import { TodoPage } from "./components/TodoPage";
 
-test('renders learn react link', () => {
+test("renders title correctly", () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  expect(screen.getByText("todos")).toBeInTheDocument();
+});
+
+test("renders container element with correct class", () => {
+  render(<App />);
+  expect(screen.getByTestId("container")).toHaveClass("container");
+});
+
+test("renders wrapper element", () => {
+  render(<App />);
+  expect(screen.getByTestId("wrapper")).toBeInTheDocument();
+});
+
+test("renders TodoPage component", () => {
+  render(<TodoPage />);
+  expect(screen.getByText("Clear completed")).toBeInTheDocument();
 });

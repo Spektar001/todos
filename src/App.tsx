@@ -3,9 +3,9 @@ import { TodoPage } from "./components/TodoPage";
 
 function App() {
   return (
-    <div className="container">
+    <div data-testid="container" className="container">
       <h1 className="title">todos</h1>
-      <div className="todo__wrapper">
+      <div data-testid="wrapper" className="todo__wrapper">
         <TodoPage />
       </div>
     </div>
